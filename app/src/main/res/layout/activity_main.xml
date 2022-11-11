@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+
+    <!--Título-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="239dp"
+        android:layout_height="66dp"
+        android:text="Jogo da Velha"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/top_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <!--Quadrados do Topo-->
+    <ImageView
+        android:id="@+id/top_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/center_left"
+        app:layout_constraintEnd_toEndOf="@id/center_left"
+        android:layout_marginBottom="40dp"
+        />
+    <ImageView
+        android:id="@+id/top_center"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/center_center"
+        android:layout_marginBottom="40dp"
+        />
+    <ImageView
+        android:id="@+id/top_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/center_right"
+        app:layout_constraintStart_toStartOf="@id/center_right"
+        />
+
+
+    <!--Quadrados Centrais-->
+    <ImageView
+        android:id="@+id/center_center"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageView
+        android:id="@+id/center_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/center_center"
+        />
+    <ImageView
+        android:id="@+id/center_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/center_center"
+        />
+
+
+    <!--Quadrados de baixo-->
+    <ImageView
+        android:id="@+id/bottom_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/center_left"
+        app:layout_constraintStart_toStartOf="@id/center_left"
+        android:layout_marginTop="40dp"
+        />
+    <ImageView
+        android:id="@+id/bottom_center"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/center_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <!--Botão de jogar novamente-->
+    <ImageView
+        android:id="@+id/bottom_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="17dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toEndOf="@+id/bottom_center"
+        app:layout_constraintTop_toBottomOf="@id/center_right"
+        />
+
+    <Button
+        android:id="@+id/bt_jogar"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="Jogar Novamente"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_center"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
