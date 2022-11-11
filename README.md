@@ -1,4 +1,4 @@
-# Jogo da Velha
+# Jogo da Velhaa
 Famoso jogo da velha recriado em app Android utilizando a linguagem Kotlin
 
 
